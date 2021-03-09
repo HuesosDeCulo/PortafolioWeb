@@ -1,0 +1,621 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+    background-color: white;
+    padding: 0 10%;
+}
+
+/* MENU */
+.cajamenu{
+    background-color: unset;
+    height: auto;
+}
+.contenido{
+    width: 79.3vw;
+    background: white;
+    height: auto;
+    padding: 0;
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0);
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+}
+.navbar{
+    z-index: 5;
+    width: 100%;
+    transition: all .5s ease;
+    border-radius: 0 0 5% 5%;
+    position: fixed;
+}
+.navbar.sticky{
+    padding: 0px 0;
+}
+.navbar .contenido{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.navbar .menu_lista{
+    /* display: inline-flex; */
+    display: flex;
+    margin-left: 20%;
+}
+.navbar .logo img{
+    width: 60px;
+    cursor: default;
+}
+.menu_lista li{
+    height: auto;
+    list-style: none;
+    margin: auto 10px;
+    padding: 0px 10px;
+}
+.menu_lista li a{
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.menu_lista li :hover{
+    color: rgb(160, 160, 160);
+    font-size: 17.5px;
+}
+.icon{
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-btn{
+    border: solid 2px rgb(30, 30, 30);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    left: 85%;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.icon.cancel-btn:hover{
+    transform: scale(1.1);
+    color: red;
+    border: solid 2px red;
+}
+.logotipo{
+    display: none;
+}
+/* CIERRE MENU */
+
+.caja1{
+    width: 100%;
+    height: 800px;
+    background: unset;
+    background: url(../img/fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.caja1 h1{
+    font-size: 5em;
+}
+.caja1 h6{
+    font-size: 2em;
+    font-weight: 100;
+}
+/* SOBRE MI */
+.caja2{
+    background: rgba(255, 255, 255);
+    height: auto;
+    padding: 50px;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+.cajotatus{
+    display: inline-flex;
+}
+.fotomia{
+    background: rgb(255, 255, 255);
+    width: 20vw;
+    height: 100%;
+    text-align: center;
+}
+.fotomia img{
+    width: auto;
+    height: 60vh;
+    border-radius: 20px;
+    margin: auto;
+    padding: 3px;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+.informacion{
+    background: rgba(155, 64, 155, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px 25px;
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+.informacion h1{
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 15px auto;
+}
+.informacion p{
+    font-size: 1.2em;
+    margin: 20px 10px;
+}
+.estudios{
+    background: rgba(255, 255, 255);    
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: inline-flex;
+}
+.carton{
+    background: rgb(255, 255, 255);
+    border: solid 2px rgb(236, 236, 236);
+    width: 30%;
+    height: 200px;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    padding: 10px 5px;
+}
+.carton h4{
+    font-size: 2em;
+}
+.carton p{
+    font-size: 1.2em;
+    margin: 15px auto;
+}
+.title{
+    position: relative;
+    text-align: center;
+    margin: 80px auto 20px auto;
+    font-size: 2em;
+    font-weight: 900;
+}
+.cajabi{
+    background: turquoise;
+    margin: auto;
+    width: 48vw;
+    height: 90vh;
+}
+.habilidades{
+    background: rgba(255, 255, 255);
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    padding: 20px 60px;
+    overflow: auto;
+    display: inline-flex;
+}
+.circlechart{
+    background: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 50%;
+}
+.cajaiconhabilitys{
+    background: rgba(241, 241, 241, 0.2);
+    border: solid 2px rgba(155, 64, 155, 0.2);
+    padding: 8px;
+    border-radius: 10px;
+    float: left;
+    /* margin: 0 8px; */
+    margin: auto;
+    width: 150px;
+    overflow: hidden;
+}
+.cajaiconhabilitys h4{
+    font-size: 1.3em;
+    font-weight: 800;
+    margin: 10px auto;
+}
+/* GALERIA */
+.galerias{
+    background: rgba(255, 255, 255);
+    border-radius: 5px;
+}
+.galerias ul{
+    display: flex;
+    text-align: center;
+}
+.galerias ul li{
+    list-style: none;
+    background: rgba(155, 64, 155, 0.2);
+    padding: 10px 25px;
+    margin: 50px auto;
+    font-size: 1.2em;
+    font-weight: 400;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.galerias ul li:active{
+    background: rgba(155, 64, 155, 0.5);
+    font-size: 1em;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product .itemBox{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 5px auto;
+}
+.product .itemBox img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.form_wrap{
+    width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Informacion de Contacto*/
+
+/* .cantact_info::before{
+    width: 100%;
+    height: auto;
+    background: rgba(155, 64, 155, 0.2);
+} */
+.cantact_info{
+    background: rgba(155, 64, 155, 0.2);
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* .info_title,
+.info_items{
+    z-index: 2;
+    color: black;
+} */
+.info_title{
+    margin-bottom: 60px;
+}
+.info_title span{
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.info_title h2{
+    font-size: 30px;
+    text-align: center;
+}
+.info_items p{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info_items p:nth-child(1) span{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.info_items p:nth-child(2) span{
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 4px;
+}
+/* Formulario de contacto*/
+form.form_contact{
+    width: 62%;
+    padding: 30px 40px;
+}
+form.form_contact h2{
+	font-size: 25px;
+	font-weight: 600;
+    text-align: center;
+	color: #303030;
+	margin-bottom: 30px;
+}
+form.form_contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+form.form_contact label{
+    font-weight: 600;
+}
+form.form_contact input,
+form.form_contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+	color: #5A5A5A;
+	font-size: 14px;
+	font-weight: 400;
+}
+form.form_contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+form.form_contact input[type="button"]{
+    width: 180px;
+	background: rgba(155, 64, 155, 0.2);
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+    align-self: flex-end;
+    color: black;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+form.form_contact input[type="button"]:hover{
+    background: rgba(155, 64, 155, 0.6);
+}
+/* Ventana de errores*/
+.modal_wrap{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje_modal{
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    width: 400px;
+    padding: 30px 20px 15px;
+}
+.mensaje_modal h3{
+    text-align: center;
+    font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 400;
+}
+.mensaje_modal h3:after{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #C5C5C5;
+	margin: 10px 0px 15px;
+}
+.mensaje_modal p{
+    font-size: 16px;
+    color: #606060;
+}
+.mensaje_modal p:before{
+    content: "\f00d";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #E25151;
+    margin-right: 8px;
+}
+#btnClose{
+    display: inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;
+	background: #E25151;
+	color: #fff;
+	border: 2px solid #B14141;
+	cursor: pointer;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 850px){
+    body{
+        padding: 0 10px;
+    }
+    .cajamenu{
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .contenido{
+        margin: 10px 0;
+    }
+    .navbar .menu_lista{
+        /* display: none; */
+        position: fixed;
+        top: 0;
+        left: -150%;
+        height: 100%;
+        width: 100%;
+        background: white;
+        max-width: 400px;
+        margin-left: 0%;
+        border-right: solid 5px rgb(30, 30, 30);
+        border-left: solid 5px rgb(30, 30, 30);
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        transition: all .5s ease;
+    }
+    .navbar .menu_lista.active{
+        left: 0%;
+    }
+    .navbar .contenido{
+        display: unset;
+        text-align: right;
+        justify-content: unset;
+    }
+    .fa-bars{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .navbar .menu_lista li{
+        margin-top: 15px;
+        padding: 5px;
+        /* border-top: solid 2px rgb(30, 30, 30);
+        border-bottom: solid 2px rgb(30, 30, 30); */
+    }
+    .navbar .menu_lista li a{
+        background: rgb(240, 240, 240);
+        border: solid 1px rgba(0, 0, 0, .5);
+        font-size: 15px;
+        font-weight: 400;
+        padding: 8px 20px;
+        border-radius: 10px;
+    }
+    .navbar .logo img{
+        display: none;
+    }
+    .logotipo{
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        margin-top: 10%;
+    }
+    .logotipo img{
+        margin: auto;
+        width: 60%;
+        height: auto;
+    }
+    /* CIERRE MENU */
+
+    .caja1{
+        width: 100%;
+    }
+    .cajotatus{
+        display: inline-block;
+    }
+    .caja2{
+        padding: 5px;
+    }
+    .fotomia{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+    .fotomia img{
+        width: auto;
+        height: 60vh;
+        margin: auto;
+        padding: 3px;
+    }
+    .informacion{
+        box-shadow: 0px -5px rgba(110, 46, 110, 0.5);
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 10px;
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+    .estudios{
+        display: inline-block;
+    }
+    .carton{
+        width: 92%;
+        margin: 5px auto;
+    }
+    .habilidades{
+        display: inline-block;
+    }
+    /* .cajabi{
+        width: 95%;
+        margin: 5px auto;
+    } */
+    /* .habilidades{
+        background: chartreuse;
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        padding: 10px 10px;
+        overflow: auto;
+    } */
+    .cajaiconhabilitys{
+        margin: 10px 10px;
+    }
+    .cajaiconhabilitys h4{
+        font-size: 1.2em;
+    }
+    .galerias ul{
+        display: flow-root;
+        text-align: center;
+    }
+    .galerias ul li{
+        list-style: none;
+        background: rgba(155, 64, 155, 0.2);
+        padding: 2px 8px;
+        margin: 5px 5px;
+        position: relative;
+        float: left;
+        font-size: 1em;
+        font-weight: 400;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .form_wrap{
+        display: inline-block;
+        width: 100%;
+    }
+    .cantact_info{
+        width: 100%;
+        padding: 15px 0;
+    }
+    .info_title{
+        margin-bottom: 30px;
+    }
+    .form_wrap{
+        width: 100%;
+        height: auto;
+    }
+    form.form_contact input,
+    form.form_contact textarea{
+    width: 80vw;
+    padding: 0;
+    }
+    form.form_contact textarea{
+        max-width: 80vw;
+        min-width: 100%;
+        max-height: 90px;
+    }
+    form.form_contact input[type="button"]{
+        width: 180px;
+        padding: 10px;
+        border: none;
+        margin: auto;
+        border-radius: 25px;
+        /* align-self: center; */
+    }
+}
